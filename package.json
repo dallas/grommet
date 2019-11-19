@@ -40,6 +40,7 @@
     "pack": "babel-node ./tools/pack",
     "storybook": "cross-env NODE_ENV=development start-storybook -p 9001 -c storybook -s ./storybook/public",
     "build-storybook": "build-storybook -c storybook -o storybook-static -s ./storybook/public",
+    "pre-commit-message": "echo 'Running pre-commit hooks… (this could take a while)'; echo ''",
     "prettier": "pretty-quick --staged"
   },
   "peerDependencies": {
@@ -144,6 +145,7 @@
     ]
   },
   "pre-commit": [
+    "pre-commit-message",
     "lint-fix",
     "prettier",
     "test"
